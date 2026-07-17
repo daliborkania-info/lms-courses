@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Jak funguje soutěžní formát average of 5?",
+   "options": [
+    "Počítá se nejlepší z 5 solvů",
+    "5 solvů, škrtne se nejlepší a nejhorší, průměr zbylých tří",
+    "Průměr všech pěti",
+    "Jeden solve na jeden pokus"
+   ],
+   "correct": 1,
+   "explain": "Stejný formát, jaký znáš z csTimeru jako ao5. Na soutěži k tomu 15 s inspekce a stackmat timer."
+  },
+  {
+   "q": "Co znamená penalizace +2?",
+   "options": [
+    "Dvě sekundy k času za kostku odloženou jeden tah před složením",
+    "Diskvalifikace",
+    "Dva pokusy navíc",
+    "Bonus za rychlost"
+   ],
+   "correct": 0,
+   "explain": "Kostka odložená o jeden tah od složeného stavu = +2 sekundy. Více tahů = DNF (did not finish)."
+  },
+  {
+   "q": "Čím se metoda Roux liší od CFOP?",
+   "options": [
+    "Je to stejná metoda",
+    "Staví bloky po stranách a střední vrstvu řeší na konci: méně tahů, více intuice",
+    "Používá jen jeden algoritmus",
+    "Funguje jen na 2x2"
+   ],
+   "correct": 1,
+   "explain": "Roux je plnohodnotná alternativa se špičkou pod 6 sekund. Přeučovat se z CFOP ale ekonomicky nedává smysl."
+  },
+  {
+   "q": "Na čem stojí blindfolded solving?",
+   "options": [
+    "Na hmatu",
+    "Na paměťových technikách (písmenové páry, paměťový palác) a jednoduchých algoritmech M2 a Old Pochmann",
+    "Na štěstí",
+    "Na rychlých prstech"
+   ],
+   "correct": 1,
+   "explain": "Blind je paměťová disciplína: zapamatuješ pozice dílků, pak je poslepu odtočíš. Rychlost prstů je vedlejší."
+  }
+ ],
+ "flashcards": [
+  { "front": "WCA", "back": "World Cube Association: oficiální soutěže, pravidla, žebříčky, 17 disciplín. worldcubeassociation.org." },
+  { "front": "Česká scéna", "back": "Soutěže v ČR/SK: speedcubing.cz a worldcubeassociation.org. Přátelská atmosféra, rychlost není podmínka." },
+  { "front": "Penalizace +2 a DNF", "back": "+2 s za kostku jeden tah od složení, DNF za víc. Hlídej AUF a odkládání kostky." },
+  { "front": "Roux a ZZ", "back": "Alternativní metody: Roux staví bloky, ZZ orientuje hrany na začátku. Znát principy ano, přeučovat se ne." },
+  { "front": "Blindfolded (BLD)", "back": "Paměťové techniky + algoritmy M2 / Old Pochmann. Disciplína pro hlavu, overlap s technikami učení z K09." }
+ ]
+}

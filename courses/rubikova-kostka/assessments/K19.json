@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Proč používat oficiální scrambly z csTimeru místo vlastního míchání?",
+   "options": [
+    "Vlastní míchání kostku ničí",
+    "Ruční míchání je předvídatelné a zkresluje časy; WCA scrambly zaručují srovnatelné podmínky",
+    "Je to povinné i doma",
+    "Vlastní míchání je pomalé"
+   ],
+   "correct": 1,
+   "explain": "Ruce míchají ve vzorcích, které pak samy rády skládají. Generovaný scramble dává férová a srovnatelná data."
+  },
+  {
+   "q": "Jak se počítá ao5?",
+   "options": [
+    "Průměr všech pěti časů",
+    "Škrtne se nejlepší a nejhorší z 5 solvů, průměr zbylých tří",
+    "Nejlepší čas z pěti",
+    "Součet pěti časů"
+   ],
+   "correct": 1,
+   "explain": "WCA formát: average of 5 s odškrtnutím extrémů. Odolný proti šťastným i smolným solvům, proto měří skutečnou úroveň."
+  },
+  {
+   "q": "Čím se liší deliberate practice od obyčejného solvení?",
+   "options": [
+    "Ničím",
+    "Cíleně driluje nejslabší fázi (jen kříž, jen F2L, trainer), místo opakování celku pro zábavu",
+    "Je delší",
+    "Dělá se jen na soutěžích"
+   ],
+   "correct": 1,
+   "explain": "Sto solvů je zábava (legitimní). Trénink = izolovat bottleneck a drilovat právě ten. Doporučený poměr 1:1 s normálními solvy."
+  },
+  {
+   "q": "Co uděláš, když se ao12 tři týdny nehne?",
+   "options": [
+    "Skončím s kostkou",
+    "Změním drill, protože současný podnět už tělo zná; případně přidám spánek a sníž objem",
+    "Koupím novou kostku",
+    "Budu trénovat dvojnásobek"
+   ],
+   "correct": 1,
+   "explain": "Plató je normální fáze. Tělo si na podnět zvyklo, potřebuje nový typ zátěže, ne víc stejné."
+  }
+ ],
+ "flashcards": [
+  { "front": "csTimer", "back": "Standardní timer scény na cstimer.net: WCA scrambly, inspekce, ao5/ao12, grafy, export." },
+  { "front": "ao5 / ao12", "back": "Průměr z 5 resp. 12 solvů bez nejlepšího a nejhoršího. Skutečná metrika úrovně, PB je loterie." },
+  { "front": "Deliberate practice", "back": "Cílený dril nejslabší fáze s okamžitou zpětnou vazbou. Blok 20 minut drill + 20 minut solvy." },
+  { "front": "Plató", "back": "Týdny bez posunu, normální fáze učení. Řešení: změnit drill, spánek, nižší objem." },
+  { "front": "Baseline", "back": "První měřený ao12 před tréninkovým blokem. Bez baseline nepoznáš, jestli plán funguje." }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Co znamenají písmena CFOP?",
+   "options": [
+    "Corner, Face, Order, Pattern",
+    "Cross, F2L, OLL, PLL",
+    "Cube, Fast, Optimal, Practice",
+    "Center, Flip, Orient, Permute"
+   ],
+   "correct": 1,
+   "explain": "Kříž dole, první dvě vrstvy po párech, orientace poslední vrstvy, permutace poslední vrstvy. Nejrozšířenější speedcubingová metoda."
+  },
+  {
+   "q": "Proč se v CFOP skládá kříž rovnou dole bez kytičky?",
+   "options": [
+    "Kytička je zakázaná pravidly",
+    "Kytička stojí tahy navíc; přímý kříž je kratší, i když se hůř učí",
+    "Dole je kříž hezčí",
+    "Kvůli magnetům"
+   ],
+   "correct": 1,
+   "explain": "Kytička je výukové lešení. Speedcubing ho bourá: plánuješ a skládáš rovnou dole, ušetříš pohledy i tahy."
+  },
+  {
+   "q": "Co plánuješ během 15 sekund inspekce?",
+   "options": [
+    "Celé složení",
+    "Na této úrovni celý kříž: kde jsou 4 bílé hrany a jak je zavezeš",
+    "Jen první tah",
+    "Nic, inspekce je na uklidnění"
+   ],
+   "correct": 1,
+   "explain": "Cíl: odtočit kříž podle plánu, ideálně i poslepu. Špička plánuje kříž + první páry, to je K17."
+  },
+  {
+   "q": "Na kolik tahů jde vždy složit kříž?",
+   "options": [
+    "Vždy přesně 4",
+    "Nejvýše 8, průměrně kolem 5 až 6",
+    "Minimálně 12",
+    "To nelze říct"
+   ],
+   "correct": 1,
+   "explain": "Matematicky dokázaný strop je 8 tahů. Praktický cíl není minimum, ale plán bez oprav a dobrá návaznost na F2L."
+  }
+ ],
+ "flashcards": [
+  { "front": "CFOP", "back": "Cross, F2L, OLL, PLL. Standardní metoda speedcubingu, jede na ní většina špičky." },
+  { "front": "Inspekce", "back": "15 sekund prohlížení před startem (pravidlo WCA). Naplánuj celý kříž dopředu." },
+  { "front": "Kříž rovnou dole", "back": "Bez kytičky: najdi bílé hrany a zavez je dolů nejkratší cestou. Dočasně pomalejší, pak rychlejší." },
+  { "front": "Strop kříže", "back": "Každý kříž jde na maximálně 8 tahů, průměr 5 až 6. Plán poráží reakci." },
+  { "front": "Dobrý kříž", "back": "Málo tahů, odtočený bez oprav a nechává kostku v dobré pozici pro první F2L pár." }
+ ]
+}

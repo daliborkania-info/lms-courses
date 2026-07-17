@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Jaký je rozdíl mezi OLL a PLL?",
+   "options": [
+    "Žádný",
+    "OLL otáčí dílky žlutou nahoru (orientace), PLL je přesouvá na správná místa (permutace)",
+    "OLL je pro hrany, PLL pro rohy",
+    "PLL se dělá před OLL"
+   ],
+   "correct": 1,
+   "explain": "Nejdřív celá horní strana žlutá (OLL), pak zpřeházené dílky na správné adresy (PLL). Orientace před permutací."
+  },
+  {
+   "q": "Proč začít 2-look OLL místo plných 57 algoritmů?",
+   "options": [
+    "Plná verze je zakázaná začátečníkům",
+    "10 algoritmů dá zhruba 80 procent výkonu za zlomek času učení",
+    "2-look je rychlejší než full OLL",
+    "57 algoritmů se nedá naučit"
+   ],
+   "correct": 1,
+   "explain": "2-look (3 hranové + 7 rohových) stojí sekundu navíc proti full OLL, ale naučíš se ho za týdny místo měsíců. Klasický 80/20 obchod."
+  },
+  {
+   "q": "Kolik případů má druhý pohled 2-look OLL (rohy) a jak se poznávají?",
+   "options": [
+    "21 případů podle barev hran",
+    "7 případů (Sune, Antisune, H, Pi, T, U, L) podle rozložení žlutých nálepek rohů",
+    "3 případy podle tečky, L a čáry",
+    "57 případů"
+   ],
+   "correct": 1,
+   "explain": "Po žlutém kříži zbývá 7 rohových tvarů. Rozpoznávej podle žlutých na bocích rohů, ne zkoušením."
+  },
+  {
+   "q": "Jaký je vztah mezi Sune a Antisune?",
+   "options": [
+    "Žádný",
+    "Antisune je inverzní (zrcadlové) Sune: R U2 R' U' R U' R'",
+    "Antisune je Sune dvakrát",
+    "Jsou to stejné algoritmy"
+   ],
+   "correct": 1,
+   "explain": "Sune: R U R' U R U2 R'. Antisune ho vrací. Vidět strukturu algoritmů znamená pamatovat si je déle."
+  }
+ ],
+ "flashcards": [
+  { "front": "OLL", "back": "Orientation of the Last Layer: celá horní strana žlutá, na místech dílků nezáleží. Třetí krok CFOP." },
+  { "front": "2-look OLL", "back": "10 algoritmů (3 hrany + 7 rohů) místo 57. Zhruba 80 procent výkonu za 20 procent práce." },
+  { "front": "Sune", "back": "R U R' U R U2 R'. Nejslavnější algoritmus kostky, jeden ze 7 rohových OLL případů." },
+  { "front": "Antisune", "back": "R U2 R' U' R U' R'. Inverze Sune, zrcadlový rohový případ." },
+  { "front": "7 rohových OLL případů", "back": "Sune, Antisune, H, Pi, T, U, L. Rozpoznání podle žlutých nálepek na bocích rohů." }
+ ]
+}

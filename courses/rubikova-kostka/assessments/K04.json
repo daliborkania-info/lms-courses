@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Jak najdeš správné místo (domeček) pro bílý roh?",
+   "options": [
+    "Kamkoli k bílému kříži",
+    "Podle jeho dalších dvou barev: patří mezi středy těch barev",
+    "Vždy vpravo dopředu",
+    "Podle velikosti"
+   ],
+   "correct": 1,
+   "explain": "Roh bílá, červená, modrá patří tam, kde se potkávají bílý, červený a modrý střed. Barvy dílku jsou jeho adresa."
+  },
+  {
+   "q": "Jak funguje výtah R' D' R D?",
+   "options": [
+    "Složí celou kostku",
+    "Opakuje se, dokud roh pod svým domečkem nezapadne bílou nahoru",
+    "Používá se jen jednou",
+    "Otáčí středy"
+   ],
+   "correct": 1,
+   "explain": "Sekvence se opakuje klidně 6x. Roh se točí a nakonec zapadne správně. Zbytek kostky se po dokončení opakování vrátí."
+  },
+  {
+   "q": "Kostka během výtahu vypadá rozbitě. Co uděláš?",
+   "options": [
+    "Přestanu a opravím kříž",
+    "V klidu dokončím opakování, kříž se vrátí sám",
+    "Zamíchám a začnu znovu",
+    "Otočím kostku"
+   ],
+   "correct": 1,
+   "explain": "Mezistav vypadá divoce, ale sekvence po dokončení cyklu okolí vrací. Panika a opravování uprostřed je nejčastější chyba."
+  },
+  {
+   "q": "Bílý roh je nahoře, ale na špatném místě nebo otočený. Co s ním?",
+   "options": [
+    "Nechám ho tam",
+    "Postavím se pod něj a jedním výtahem ho shodím dolů, pak usadím normálně",
+    "Vyndám ho prsty",
+    "Otočím celou kostku vzhůru nohama"
+   ],
+   "correct": 1,
+   "explain": "Jeden cyklus R' D' R D roh vyhodí do spodní vrstvy. Odtud ho pak klasicky navedeš pod domeček a usadíš."
+  }
+ ],
+ "flashcards": [
+  { "front": "Výtah R' D' R D", "back": "Opakuj pod domečkem rohu, dokud roh nezapadne bílou nahoru. Klidně 6 opakování." },
+  { "front": "Domeček rohu", "back": "Místo mezi středy barev toho rohu. Barvy dílku = jeho adresa." },
+  { "front": "Kde držet roh před výtahem", "back": "Roh dole vpravo vepředu, jeho domeček nad ním. Kříž je nahoře." },
+  { "front": "Rozbitá kostka při výtahu", "back": "Normální mezistav. Dokonči opakování, kříž se vrátí. Neopravovat uprostřed!" },
+  { "front": "První vrstva hotová", "back": "Bílý kříž + 4 bílé rohy, boční barvy navazují na středy. Následuje druhá vrstva." }
+ ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "rubikova-kostka",
+  "title": "Rubikova kostka: od první vrstvy po speedcubing",
+  "description": "Rodinný kurz skládání Rubikovy kostky 3x3. Bloky 1 a 2 zvládne i malé dítě (metoda vrstev, jednoduchý jazyk), bloky 3 a 4 vedou přes CFOP až ke speedcubingu a soutěžím. 20 modulů, 4 bloky.",
+  "level": "Hobby",
+  "language": "cs",
+  "version": "1.1",
+  "icon": "🧩",
+  "requires": null,
+  "semesters": [
+    {
+      "number": 1,
+      "title": "Poznej kostku a slož první vrstvu",
+      "modules": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "B01-TEST"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Slož celou kostku",
+      "modules": [
+        "K06",
+        "K07",
+        "K08",
+        "K09",
+        "K10",
+        "B02-TEST"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Zrychlování: CFOP základy",
+      "modules": [
+        "K11",
+        "K12",
+        "K13",
+        "K14",
+        "K15",
+        "B03-TEST"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Speedcubing expert",
+      "modules": [
+        "K16",
+        "K17",
+        "K18",
+        "K19",
+        "K20",
+        "B04-TEST"
+      ]
+    }
+  ],
+  "badges": [
+    {
+      "id": "blok-1",
+      "title": "Blok 1: První vrstva",
+      "icon": "🌼",
+      "rule": {
+        "type": "semester_complete",
+        "semester": 1
+      }
+    },
+    {
+      "id": "blok-2",
+      "title": "Blok 2: Celá kostka složena",
+      "icon": "🏅",
+      "rule": {
+        "type": "semester_complete",
+        "semester": 2
+      }
+    },
+    {
+      "id": "blok-3",
+      "title": "Blok 3: CFOP základy",
+      "icon": "⚡",
+      "rule": {
+        "type": "semester_complete",
+        "semester": 3
+      }
+    },
+    {
+      "id": "blok-4",
+      "title": "Blok 4: Speedcubing expert",
+      "icon": "🏆",
+      "rule": {
+        "type": "semester_complete",
+        "semester": 4
+      }
+    },
+    {
+      "id": "course-rubikova-kostka",
+      "title": "Speedcuber",
+      "icon": "🧩",
+      "rule": {
+        "type": "course_complete"
+      }
+    }
+  ]
+}

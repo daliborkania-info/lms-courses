@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Kterou hranu hledáš pro druhou vrstvu?",
+   "options": [
+    "Jakoukoli v horní vrstvě",
+    "Hranu bez žluté barvy",
+    "Hranu se žlutou barvou",
+    "Hranu s bílou barvou"
+   ],
+   "correct": 1,
+   "explain": "Do prostřední vrstvy patří hrany bez žluté. Hrany se žlutou patří do poslední vrstvy a přijdou na řadu později."
+  },
+  {
+   "q": "Co je tvar T a jak vznikne?",
+   "options": [
+    "Zvláštní druh kostky",
+    "Hrana srovnaná barvou na svůj střed: střed je sloupek, hrana stříška",
+    "Tři žluté v řadě",
+    "Název algoritmu"
+   ],
+   "correct": 1,
+   "explain": "Otáčíš U, dokud přední barva hrany nesedí na střed pod ní. Vzniklé obrácené T říká, že hrana je připravená k zasunutí."
+  },
+  {
+   "q": "Podle čeho poznáš, jestli hrana půjde doprava, nebo doleva?",
+   "options": [
+    "Podle horní barvy hrany: ukazuje ke středu své barvy",
+    "Vždy doprava",
+    "Hodím si korunou",
+    "Podle bílé strany"
+   ],
+   "correct": 0,
+   "explain": "Po vytvoření T se podívej na barvu hrany nahoře. Slot na straně, kde je střed té barvy, je cíl: doprava nebo doleva."
+  },
+  {
+   "q": "Hrana je v prostřední vrstvě, ale špatně. Co s ní?",
+   "options": [
+    "Nejde opravit, zamíchat znovu",
+    "Vložím na její místo jinou hranu z horní vrstvy, tím ji vyhodím nahoru, a pak ji usadím správně",
+    "Otočím středy",
+    "Použiju žlutý kříž"
+   ],
+   "correct": 1,
+   "explain": "Algoritmus, který hrany zasouvá, je umí i vyhazovat: zasuň na její místo cokoli a špatná hrana vyskočí nahoru."
+  }
+ ],
+ "flashcards": [
+  { "front": "Druhá vrstva: co hledám", "back": "Hrany bez žluté v horní vrstvě. Žluté hrany nechat na později." },
+  { "front": "Tvar T", "back": "Hrana srovnaná přední barvou na svůj střed. Signál, že je připravená k zasunutí." },
+  { "front": "Zasunutí doprava", "back": "U R U' R' U' F' U F. Osm tahů, hrana zajede do pravého slotu." },
+  { "front": "Zasunutí doleva", "back": "U' L' U L U F U' F'. Zrcadlový algoritmus pro levý slot." },
+  { "front": "Špatně usazená hrana", "back": "Zasuň na její místo libovolnou horní hranu, tím ji vyhodíš nahoru, pak usaď správně." }
+ ]
+}

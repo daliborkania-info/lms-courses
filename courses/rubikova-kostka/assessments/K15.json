@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Kterým prstem se točí tah U?",
+   "options": [
+    "Palcem",
+    "Cvrnknutím pravého ukazováčku (U' levým)",
+    "Celým zápěstím",
+    "Malíčkem"
+   ],
+   "correct": 1,
+   "explain": "U tahy jsou nejčastější tahy na kostce a cvrnknutí ukazováčkem je řádově rychlejší než otáčení zápěstím."
+  },
+  {
+   "q": "Jak vypadá správný neutrální grip?",
+   "options": [
+    "Kostka pevně v dlaních",
+    "Kostka na konečcích prstů: palce vpředu dole, ukazováčky volné nahoře",
+    "Jedna ruka drží, druhá točí",
+    "Kostka na stole"
+   ],
+   "correct": 1,
+   "explain": "Kostku drží konečky prstů za spodní část, ukazováčky jsou připravené na U tahy. Dlaně by blokovaly pohyb."
+  },
+  {
+   "q": "Co je regrip a proč je nepřítel?",
+   "options": [
+    "Výměna kostky; stojí peníze",
+    "Přehmátnutí ruky během algoritmu; stojí čas a dá se dobrým prstokladem eliminovat",
+    "Druh maziva; nic nestojí",
+    "Otočení celé kostky; vypadá špatně"
+   ],
+   "correct": 1,
+   "explain": "Dobré provedení algoritmu má 0 až 1 regrip. Doporučené prstoklady k algoritmům najdeš na jperm.net."
+  },
+  {
+   "q": "Jak se správně přeučuje algoritmus na fingertricks?",
+   "options": [
+    "Rovnou na plnou rychlost",
+    "Týden pomalu a přesně novým prstokladem, pak teprve zrychlovat",
+    "Nepřeučuje se, starý způsob stačí",
+    "Jen se na to dívat na videu"
+   ],
+   "correct": 1,
+   "explain": "Svalová paměť se učí i chyby. Pomalé přesné opakování zafixuje správný pohyb, rychlost pak přijde sama."
+  }
+ ],
+ "flashcards": [
+  { "front": "Fingertrick", "back": "Provedení tahu jedním prstem (U ukazováčkem, D prsteníčkem). Prsty zvládnou 5 až 8 tahů za sekundu." },
+  { "front": "Neutrální grip", "back": "Kostka na konečcích prstů, palce vpředu dole, ukazováčky volné pro U tahy." },
+  { "front": "Regrip a rotace", "back": "Přehmátnutí ruky a otočení celé kostky. Obojí stojí čas, dobrý prstoklad je eliminuje." },
+  { "front": "TPS", "back": "Turns per second, tahy za sekundu. Metrika rychlosti rukou; bez lookahead je k ničemu." },
+  { "front": "Metronomový drill", "back": "Točit algoritmy do rytmu, začít pomalu a denně zrychlovat. Buduje plynulost bez pauz." }
+ ]
+}

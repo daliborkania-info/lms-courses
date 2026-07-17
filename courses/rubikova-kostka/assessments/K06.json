@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Jaké čtyři tvary může dělat žlutá (jen hrany) na horní straně?",
+   "options": [
+    "Kruh, čtverec, trojúhelník, kříž",
+    "Tečka, písmeno L, čára, kříž",
+    "Jen čára a kříž",
+    "Kytička, kříž, roh, hrana"
+   ],
+   "correct": 1,
+   "explain": "Počítají se jen hrany. Existují přesně čtyři stavy: tečka, L, čára a hotový kříž. Nic jiného kostka neumí."
+  },
+  {
+   "q": "Který algoritmus posouvá tvar žluté o krok dál?",
+   "options": [
+    "R' D' R D",
+    "F R U R' U' F'",
+    "R U R' U R U2 R'",
+    "U R U' L'"
+   ],
+   "correct": 1,
+   "explain": "F R U R' U' F' udělá z tečky L, z L čáru a z čáry kříž. Jedno kouzlo na celý krok, maximálně 3x za sebou."
+  },
+  {
+   "q": "Jak musí být natočený tvar L před algoritmem?",
+   "options": [
+    "Jakkoli",
+    "V levém horním rohu, jako začátek psaní písmene L",
+    "V pravém dolním rohu",
+    "Směrem k tobě"
+   ],
+   "correct": 1,
+   "explain": "L patří do levého horního rohu, čára vodorovně. Špatné natočení znamená, že algoritmus vyjde naprázdno."
+  },
+  {
+   "q": "Proč u žlutého kříže neřešíme barvy hran po stranách?",
+   "options": [
+    "Protože na nich nikdy nezáleží",
+    "Srovnání barev je samostatný další krok (K07)",
+    "Barvy se srovnají samy",
+    "Protože hrany nemají barvy"
+   ],
+   "correct": 1,
+   "explain": "Poslední vrstva se skládá po krocích: nejdřív žlutá nahoru (orientace), pak dílky na místa (permutace). Každý krok má svůj nástroj."
+  }
+ ],
+ "flashcards": [
+  { "front": "Algoritmus žlutého kříže", "back": "F R U R' U' F'. Tečka na L, L na čáru, čára na kříž." },
+  { "front": "Natočení tvaru L", "back": "Do levého horního rohu, jako když začínáš psát písmeno L." },
+  { "front": "Natočení čáry", "back": "Vodorovně, zleva doprava. Pak teprve algoritmus." },
+  { "front": "Čtyři tvary žlutých hran", "back": "Tečka, L, čára, kříž. Maximálně 3 opakování algoritmu od tečky ke kříži." },
+  { "front": "Orientace vs. permutace", "back": "Orientace = barva správně nahoru. Permutace = dílek na správné místo. Skládá se nejdřív orientace hran." }
+ ]
+}

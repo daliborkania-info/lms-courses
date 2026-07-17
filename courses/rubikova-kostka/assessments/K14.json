@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Co jsou světlomety (headlights)?",
+   "options": [
+    "Lesklé nálepky",
+    "Dva sousední rohy se stejnou barvou na boční straně",
+    "Dvě žluté hrany",
+    "Druh kostky se svítícími dílky"
+   ],
+   "correct": 1,
+   "explain": "Jako dvě přední světla auta stejné barvy vedle sebe. Ukazují, kam natočit kostku před T permem."
+  },
+  {
+   "q": "Co uděláš, když světlomety nikde nevidíš?",
+   "options": [
+    "Kostka je rozbitá",
+    "Spustím T perm z libovolné pozice, tím světlomety vzniknou",
+    "Přeskočím rohy",
+    "Udělám znovu OLL"
+   ],
+   "correct": 1,
+   "explain": "Bez světlometů je speciální případ rohů: jeden T perm odkudkoli je vyrobí, druhý je pošle domů."
+  },
+  {
+   "q": "Které čtyři hranové případy má 2-look PLL?",
+   "options": [
+    "Sune, Antisune, H, Pi",
+    "Ua, Ub, H a Z perm",
+    "T, Y, Ja, Jb",
+    "Tečka, L, čára, kříž"
+   ],
+   "correct": 1,
+   "explain": "Ua a Ub točí tři hrany dokola (každý opačně), H prohazuje protější a Z sousední hrany."
+  },
+  {
+   "q": "Co je AUF?",
+   "options": [
+    "Druh penalizace",
+    "Adjust U Face: závěrečné dotočení horní vrstvy po posledním algoritmu",
+    "Rakouský výrobce kostek",
+    "Algoritmus na rohy"
+   ],
+   "correct": 1,
+   "explain": "Po PLL často zbývá dotočit U. Zapomenutý AUF je nejčastější zbytečně ztracená vteřina na konci solvu."
+  }
+ ],
+ "flashcards": [
+  { "front": "PLL", "back": "Permutation of the Last Layer: přesun dílků poslední vrstvy na správná místa. Závěrečný krok CFOP." },
+  { "front": "T perm", "back": "R U R' U' R' F R2 U' R' U' R U R' F'. Řeší rohy podle světlometů, nejpoužívanější PLL." },
+  { "front": "Světlomety (headlights)", "back": "Dva sousední rohy se stejnou boční barvou. Před T permem je dej dozadu." },
+  { "front": "Ua perm", "back": "R U' R U R U R U' R' U' R2. Točí tři hrany dokola, Ub je inverze." },
+  { "front": "AUF", "back": "Adjust U Face: poslední dotočení horní vrstvy. Nezapomenout, až pak pustit kostku." }
+ ]
+}

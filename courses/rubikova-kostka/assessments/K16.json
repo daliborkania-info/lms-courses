@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Proč se učí full PLL dřív než full OLL?",
+   "options": [
+    "Je abecedně první",
+    "Má jen 21 algoritmů a používáš ho v každém solvu; OLL má 57 a půlka případů je vzácná",
+    "OLL je zakázaný",
+    "PLL je jednodušší na prsty"
+   ],
+   "correct": 1,
+   "explain": "Ekonomika učení: menší investice (21 vs. 57) a vyšší frekvence použití znamená rychlejší návratnost."
+  },
+  {
+   "q": "Jaké je udržitelné tempo učení nových algoritmů?",
+   "options": [
+    "10 denně",
+    "2 až 3 týdně s týdenním cyklem: naučit, drilovat, používat, otestovat po pauze",
+    "1 ročně",
+    "Všechny najednou o víkendu"
+   ],
+   "correct": 1,
+   "explain": "Kdo se učí 10 najednou, za měsíc si je plete. Pomalé stabilní tempo je rychlejší cesta k cíli."
+  },
+  {
+   "q": "Podle čeho vybíráš svou variantu algoritmu pro daný případ?",
+   "options": [
+    "Nejkratší na papíře",
+    "Sedí tvým rukám: žádný regrip, příjemný rytmus; pak už ji neměnit",
+    "Náhodně",
+    "Podle toho, co používá mistr světa"
+   ],
+   "correct": 1,
+   "explain": "Počet tahů na papíře neurčuje rychlost provedení. Ergonomie tvých rukou ano. Vyzkoušej 2 až 3 varianty a zafixuj."
+  },
+  {
+   "q": "Co jsou rodiny OLL případů a k čemu jsou?",
+   "options": [
+    "Výrobci kostek",
+    "Skupiny případů s podobným tvarem a sdílenými triggery; třetí algoritmus rodiny se učí za polovinu času",
+    "Kategorie soutěží",
+    "Typy mazadel"
+   ],
+   "correct": 1,
+   "explain": "Rybičky, T tvary, W tvary a další sdílejí logiku i opakující se kousky (triggery jako R U R' U'). Struktura zrychluje učení."
+  }
+ ],
+ "flashcards": [
+  { "front": "Full PLL", "back": "21 algoritmů permutace poslední vrstvy. Priorita číslo 1 po 2-look, ušetří 2 až 3 sekundy." },
+  { "front": "Full OLL", "back": "57 algoritmů orientace. Učit až po PLL, polovina případů je vzácná." },
+  { "front": "Týdenní cyklus algoritmu", "back": "Pondělí naučit pomalu, celý týden dril a používání v solvech, neděle test po pauze." },
+  { "front": "Trigger", "back": "Opakující se kousek algoritmů (R U R' U', R U R'). Stavební kostka rodin případů." },
+  { "front": "Nejčastější PLL na start", "back": "T, Ja, Jb, Y, Aa, Ab. Pokrývají většinu solvů, uč se je první." }
+ ]
+}

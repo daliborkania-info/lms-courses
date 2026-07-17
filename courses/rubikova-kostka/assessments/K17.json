@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Co skutečně žere čas při solvu na této úrovni?",
+   "options": [
+    "Pomalé tahy",
+    "Pauzy mezi kroky, typicky 8 až 12 pauz tvoří třetinu času",
+    "Špatná kostka",
+    "Dlouhé algoritmy"
+   ],
+   "correct": 1,
+   "explain": "Změř si pauzy delší než půl sekundy. Lookahead je odstraňuje: oči hledají další práci, zatímco ruce dotáčejí současnou."
+  },
+  {
+   "q": "Jak funguje drill pomalých solvů?",
+   "options": [
+    "Točíš co nejrychleji",
+    "Točíš schválně pomalu (asi 2 tahy za sekundu), ale nikdy se nezastavíš",
+    "Skládáš jen jednu vrstvu",
+    "Skládáš poslepu"
+   ],
+   "correct": 1,
+   "explain": "Pomalé tempo dává očím čas najít další pár. Týden pomalých solvů zrychlí víc než měsíc sprintování."
+  },
+  {
+   "q": "Co je cross+1?",
+   "options": [
+    "Kříž s jedním tahem navíc",
+    "Naplánování kříže a prvního F2L páru během 15 s inspekce",
+    "Speciální algoritmus",
+    "Penalizace na soutěži"
+   ],
+   "correct": 1,
+   "explain": "Zlatý standard inspekce na pokročilé úrovni. Trénuje se zpětnou analýzou prvního páru po solvu."
+  },
+  {
+   "q": "Jak poznáš, že tvůj limit jsou oči, a ne ruce?",
+   "options": [
+    "Bolí tě ruce",
+    "Máš vysoké TPS v drilech, ale v solvech pauzy: ruce čekají na oči",
+    "Kostka se zasekává",
+    "Nejde to poznat"
+   ],
+   "correct": 1,
+   "explain": "Rychlé algoritmy izolovaně + pomalé solvy s pauzami = bottleneck je rozpoznávání a lookahead, ne rychlost prstů."
+  }
+ ],
+ "flashcards": [
+  { "front": "Lookahead", "back": "Oči hledají další pár, zatímco ruce dotáčejí současný. Ruce nikdy nečekají na oči." },
+  { "front": "Slow solving drill", "back": "Schválně pomalé tempo bez jediné zastávky. Nejúčinnější trénink lookahead." },
+  { "front": "Cross+1", "back": "V inspekci naplánovat kříž + první F2L pár. Špička plánuje kříž + 2 páry." },
+  { "front": "XCross", "back": "Kříž složený tak, že první pár vznikne současně s ním. Ber ho, když ho vidíš, nehledej silou." },
+  { "front": "Pauzy jako metrika", "back": "Spočítej pauzy nad půl sekundy za solve. Jejich odstranění je největší dostupné zrychlení." }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Co je základní jednotka práce v F2L?",
+   "options": [
+    "Jedna vrstva",
+    "Pár: bílý roh + hrana prostřední vrstvy, které patří k sobě",
+    "Jeden tah",
+    "Jedna barva"
+   ],
+   "correct": 1,
+   "explain": "F2L skládá roh a hranu společně: spárovat nahoře, zasunout do slotu. Čtyři páry = dvě vrstvy."
+  },
+  {
+   "q": "Proč se F2L učit intuitivně, a ne ze seznamu 41 algoritmů?",
+   "options": [
+    "Algoritmy jsou tajné",
+    "Pochopení párování je přenositelné a rychlejší na naučení; algoritmy doplníš později jen na těžké případy",
+    "Algoritmy nefungují",
+    "Je to jednodušší pro děti"
+   ],
+   "correct": 1,
+   "explain": "Hodina hraní s párováním naučí princip, který pokryje většinu případů. Biflování 41 algoritmů bez pochopení je pomalejší cesta."
+  },
+  {
+   "q": "Dílek páru je zaseklý ve slotu. Co uděláš?",
+   "options": [
+    "Zamíchám kostku",
+    "Vytáhnu ho nahoru (například U R U' R') a řeším jako normální případ",
+    "Nechám ho tam",
+    "Použiju PLL"
+   ],
+   "correct": 1,
+   "explain": "Třetí základní situace: vyhodit dílek do horní vrstvy a pak klasicky spárovat a zasunout."
+  },
+  {
+   "q": "Proč budeš s F2L první týden pomalejší než s metodou vrstev?",
+   "options": [
+    "F2L je horší metoda",
+    "Každá změna techniky má J křivku: nejdřív pokles, pak výrazné zrychlení díky úspoře tahů",
+    "Protože je potřeba nová kostka",
+    "Nebudeš, zrychlení je okamžité"
+   ],
+   "correct": 1,
+   "explain": "Staré návyky jsou zautomatizované, nové ještě ne. F2L ušetří přes polovinu tahů, návratnost přijde do měsíce."
+  }
+ ],
+ "flashcards": [
+  { "front": "F2L", "back": "First Two Layers: první dvě vrstvy po párech roh + hrana. Druhý krok CFOP." },
+  { "front": "Pár", "back": "Bílý roh a hrana prostřední vrstvy se společnými barvami. Spárovat nahoře, zasunout do slotu." },
+  { "front": "Slot", "back": "Jedno ze čtyř míst pro pár (roh dole + hrana nad ním). Sleduj sloty, ne horní vrstvu." },
+  { "front": "Tři základní situace F2L", "back": "1) pár správně u sebe: zasuň, 2) pár špatně natočený: rozděl a slož, 3) dílek ve slotu: vytáhni." },
+  { "front": "J křivka změny techniky", "back": "Nová technika nejdřív zpomalí, pak výrazně zrychlí. U F2L návratnost do měsíce." }
+ ]
+}

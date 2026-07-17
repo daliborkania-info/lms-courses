@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Kterým algoritmem se otáčí poslední žluté rohy?",
+   "options": [
+    "F R U R' U' F'",
+    "R' D' R D, stejný výtah jako u bílých rohů",
+    "Sune",
+    "U R U' L' U R' U' L"
+   ],
+   "correct": 1,
+   "explain": "Starý známý výtah z K04. Opakuješ ho na rohu vpravo vepředu, dokud nemá žlutou nahoře."
+  },
+  {
+   "q": "Jak se dostaneš k dalšímu neotočenému rohu?",
+   "options": [
+    "Otočím celou kostku v ruce",
+    "Otočím jen horní stranou (U), kostku držím pořád stejně",
+    "Udělám znovu žlutý kříž",
+    "Otočím spodní stranou"
+   ],
+   "correct": 1,
+   "explain": "Kostka zůstává v ruce stejně, na pracovní místo vpravo vepředu si rohy vozíš tahem U. Jinak se všechno rozbije."
+  },
+  {
+   "q": "Proč kostka uprostřed tohoto kroku vypadá rozbitě?",
+   "options": [
+    "Protože je rozbitá a je třeba začít znovu",
+    "Výtah dočasně rozhazuje spodní vrstvy a srovná je až poslední opakování",
+    "Protože jsou špatně středy",
+    "To se nestává"
+   ],
+   "correct": 1,
+   "explain": "Mezistav je divoký schválně. Poslední otočení posledního rohu všechno vrátí. Opravovat uprostřed = zkáza."
+  },
+  {
+   "q": "Kolik algoritmů celkem potřebuješ na složení celé kostky metodou vrstev?",
+   "options": [
+    "Kolem dvaceti",
+    "Pět: výtah, dva na druhou vrstvu, žlutý kříž, Sune a kolotoč se počítají dohromady jako repertoár začátečníka",
+    "Jeden",
+    "Padesát sedm"
+   ],
+   "correct": 1,
+   "explain": "Výtah (2x použití), druhá vrstva doprava a doleva, F R U R' U' F', Sune, kolotoč. Malý repertoár, celá kostka."
+  }
+ ],
+ "flashcards": [
+  { "front": "Otočení žlutých rohů", "back": "R' D' R D na rohu vpravo vepředu, opakovat do žluté nahoře. Mezi rohy jen tah U." },
+  { "front": "Zákaz při otáčení rohů", "back": "Neotáčet kostku v ruce a neopravovat rozbitě vypadající spodek. Commit přijde na konci." },
+  { "front": "Osm kroků celé kostky", "back": "Kytička, bílý kříž, bílé rohy, druhá vrstva, žlutý kříž, hrany, rohy na místa, otočení rohů." },
+  { "front": "Repertoár začátečníka", "back": "5 algoritmů: výtah, druhá vrstva 2x, žlutý kříž, Sune, kolotoč. Víc není potřeba." },
+  { "front": "Po složení kostky", "back": "Trénink: stejné kroky, míň přemýšlení. Cíl bloku 2: pod 2 minuty a pak CFOP." }
+ ]
+}

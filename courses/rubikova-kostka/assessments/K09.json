@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Co je chunking?",
+   "options": [
+    "Rychlé točení kostkou",
+    "Rozdělení dlouhého algoritmu na menší smysluplné kousky",
+    "Druh maziva",
+    "Zapomínání algoritmů"
+   ],
+   "correct": 1,
+   "explain": "Hlava si pamatuje bloky, ne jednotlivá písmena. Osm tahů jako dva kousky po čtyřech drží mnohem líp."
+  },
+  {
+   "q": "Proč k algoritmu pomáhá vymyslet příběh?",
+   "options": [
+    "Nepomáhá, je to ztráta času",
+    "Mozek si příběhy a obrazy pamatuje líp než abstraktní sekvence",
+    "Je to povinné pravidlo",
+    "Zrychluje prsty"
+   ],
+   "correct": 1,
+   "explain": "Čím hloupější a živější příběh, tím lepší zapamatování. Paměť je stavěná na příběhy, ne na řetězce písmen."
+  },
+  {
+   "q": "Co je svalová paměť a jaké má riziko?",
+   "options": [
+    "Silné prsty; riziko křečí",
+    "Ruce provedou algoritmus samy; riziko je, že se naučí i chyby",
+    "Paměť na barvy; žádné riziko",
+    "Trik pro soutěže"
+   ],
+   "correct": 1,
+   "explain": "Cíl je odtočit bez přemýšlení. Proto prvních 20 opakování pomalu a přesně: ruce se učí i chyby a přeučování bolí."
+  },
+  {
+   "q": "Kdy víš, že si algoritmus pamatuješ doopravdy?",
+   "options": [
+    "Když ho zvládneš 5 minut po naučení",
+    "Když ho vybavíš po dni i více dnech pauzy",
+    "Když ho umíš přečíst",
+    "Když ho umí kamarád"
+   ],
+   "correct": 1,
+   "explain": "Test s odstupem (spaced repetition) odhalí skutečné zapamatování. Opakuj dnes, zítra, za tři dny, za týden."
+  }
+ ],
+ "flashcards": [
+  { "front": "Chunking", "back": "Dělení algoritmu na smysluplné kousky (U R U' R' + U' F' U F). Základ zapamatování." },
+  { "front": "Příběh k algoritmu", "back": "Živý obraz nebo říkanka ke kouskům tahů. Čím hloupější, tím lépe drží." },
+  { "front": "Svalová paměť (muscle memory)", "back": "Ruce odtočí algoritmus samy. Buduje se pomalým přesným opakováním, učí se i chyby." },
+  { "front": "Spaced repetition", "back": "Opakování s rozestupy: dnes, zítra, za 3 dny, za týden. Jediný spolehlivý test paměti." },
+  { "front": "Pět algoritmů začátečníka", "back": "Výtah, druhá vrstva doprava, doleva, žlutý kříž, Sune, kolotoč. Nauč se učit na malém počtu." }
+ ]
+}

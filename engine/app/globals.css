@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { -webkit-text-size-adjust: 100%; }
+body { @apply bg-bg text-slate-200 antialiased; }
+
+/* Markdown content */
+.prose-lms { @apply text-[15px] leading-relaxed; }
+.prose-lms h1 { @apply text-xl font-bold text-white mt-2 mb-4; }
+.prose-lms h2 { @apply text-lg font-bold text-white mt-6 mb-3 border-b border-slate-700 pb-1; }
+.prose-lms h3 { @apply text-base font-semibold text-indigo-300 mt-5 mb-2; }
+.prose-lms p { @apply my-3; }
+.prose-lms strong { @apply text-white; }
+.prose-lms ul { @apply list-disc pl-5 my-3 space-y-1; }
+.prose-lms ol { @apply list-decimal pl-5 my-3 space-y-1; }
+.prose-lms blockquote { @apply border-l-4 border-amber-500/60 bg-card2 rounded-r px-3 py-2 my-3 text-slate-300 italic; }
+.prose-lms code { @apply bg-card2 rounded px-1 py-0.5 text-[13px] text-amber-200; }
+.prose-lms pre { @apply bg-card2 rounded-lg p-3 overflow-x-auto my-3; }
+.prose-lms pre code { @apply bg-transparent p-0; }
+.prose-lms table { @apply w-full text-sm my-3 border-collapse; }
+.prose-lms th { @apply text-left border-b border-slate-600 px-2 py-1 text-slate-300; }
+.prose-lms td { @apply border-b border-slate-800 px-2 py-1 align-top; }
+.prose-lms .mermaid-box { @apply bg-white rounded-lg p-2 my-4 overflow-x-auto; }
+.prose-lms .mermaid-box svg { margin: 0 auto; max-width: 100%; height: auto; }
+.prose-lms .asset-img { @apply block bg-white rounded-lg p-2 my-4 relative cursor-zoom-in; }
+.prose-lms .asset-img img { margin: 0 auto; max-width: 100%; height: auto; display: block; }
+.prose-lms .asset-img figcaption,
+.prose-lms .asset-caption { @apply block text-center text-xs text-slate-400 mt-1 not-italic; }
+
+/* Fullscreen lightbox pro diagramy */
+.mermaid-lightbox svg { display: block; max-width: none; }
+
+.card { @apply bg-card rounded-2xl p-4 shadow-lg shadow-black/20 border border-slate-800; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 font-semibold transition active:scale-95 disabled:opacity-40 disabled:pointer-events-none; }
+.btn-primary { @apply btn bg-accent text-white hover:bg-indigo-500; }
+.btn-ghost { @apply btn bg-card2 text-slate-200 hover:bg-slate-700; }
+
+@keyframes pop { 0% { transform: scale(0.6); opacity: 0; } 70% { transform: scale(1.08); } 100% { transform: scale(1); opacity: 1; } }
+.animate-pop { animation: pop .35s ease-out; }

@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Čím se moderní speedcube liší od kostky z hračkářství?",
+   "options": [
+    "Jen cenou",
+    "Magnety, nastavitelným napětím, corner cuttingem a barveným plastem místo nálepek",
+    "Velikostí",
+    "Počtem dílků"
+   ],
+   "correct": 1,
+   "explain": "Magnety zacvakávají vrstvy, corner cutting odpouští nepřesné tahy, plast nahrazuje odlepující se nálepky."
+  },
+  {
+   "q": "Jakou kostku koupit, dokud nejsi pod 30 sekund?",
+   "options": [
+    "Nejdražší GAN",
+    "Budget speedcube kolem 300 Kč (třída MoYu RS3 M), je plně soutěžeschopná",
+    "Kostku z hračkářství",
+    "Žádnou, hardware nerozhoduje nikdy"
+   ],
+   "correct": 1,
+   "explain": "Budget třída dnes umí všechno podstatné. Prémiové kostky přidávají komfort a nastavitelnost, ne sekundy."
+  },
+  {
+   "q": "Jak se kostka správně maže?",
+   "options": [
+    "Jednou za rok olejem na kolo",
+    "Pár kapek silikonového maziva zhruba jednou měsíčně: hustší do jádra, řidší na dílky",
+    "Vodou",
+    "Nemaže se nikdy"
+   ],
+   "correct": 1,
+   "explain": "Silikonová maziva zrychlí a ztiší kostku. Kuchyňské a technické oleje plast poškozují."
+  },
+  {
+   "q": "Kdy je nákup nové kostky prokrastinace?",
+   "options": [
+    "Vždy",
+    "Když časy stagnují kvůli chybějícímu tréninku; nová kostka stagnaci nespraví",
+    "Nikdy",
+    "Když je v akci"
+   ],
+   "correct": 1,
+   "explain": "Hardware kupuj, když kostka poppuje, zasekává se nebo nezvládá tvé TPS. Stagnující průměr řeší drily, ne e-shop."
+  }
+ ],
+ "flashcards": [
+  { "front": "Corner cutting", "back": "Schopnost kostky dotočit nedotočenou vrstvu přes roh. Odpouští nepřesné rychlé tahy." },
+  { "front": "Budget vs. prémium", "back": "300 Kč (RS3 M třída) stačí do 30 s průměru. Prémium (GAN, WeiLong) přidává komfort, ne sekundy." },
+  { "front": "Mazání kostky", "back": "Silikonové mazivo: hustší do jádra, řidší na plochy dílků, pár kapek měsíčně." },
+  { "front": "Seřízení napětí", "back": "Šrouby pod středy a nastavení magnetů. Malé symetrické změny, jedna změna najednou a testuj." },
+  { "front": "Kde nakupovat a srovnávat", "back": "Žebříčky: cuboss.com, speedcubeshop.com. Český obchod: fyft.cz. Modely se mění, principy ne." }
+ ]
+}

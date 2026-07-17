@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Kde musí být žlutý střed, když skládáš bílou kytičku?",
+   "options": [
+    "Dole",
+    "Nahoře, bílé lístky se skládají kolem něj",
+    "Vepředu",
+    "Je to jedno"
+   ],
+   "correct": 1,
+   "explain": "Kytička = 4 bílé hrany kolem žlutého středu nahoře. Bílá a žlutá jsou na kostce vždy naproti sobě."
+  },
+  {
+   "q": "Jak se z lístku kytičky stane část kříže?",
+   "options": [
+    "Otočím celou kostku",
+    "Srovnám druhou barvu lístku nad střed stejné barvy a otočím tou stranou dvakrát",
+    "Udělám R U R' U'",
+    "Lístek vytáhnu a zastrčím jinam"
+   ],
+   "correct": 1,
+   "explain": "Zelená hrana musí nad zelený střed, pak F2 pošle lístek dolů. Tak sedí bílá dole i barva na boku."
+  },
+  {
+   "q": "Jak poznáš, že je bílý kříž opravdu správně?",
+   "options": [
+    "Dole je bílý kříž a hotovo",
+    "Dole je kříž a každá jeho hrana barvou navazuje na boční střed",
+    "Nahoře je žlutá",
+    "Kostka je z poloviny složená"
+   ],
+   "correct": 1,
+   "explain": "Bílý kříž bez správných bočních barev je špatně postavený základ. Kontrola barev je povinný test tohoto kroku."
+  },
+  {
+   "q": "Co se stane, když kříž nemá správné boční barvy a pokračuješ dál?",
+   "options": [
+    "Nic, srovná se to samo",
+    "Druhá vrstva a zbytek nepůjdou správně poskládat",
+    "Kostka se rozpadne",
+    "Jen to bude pomalejší"
+   ],
+   "correct": 1,
+   "explain": "Všechny další kroky staví na správném kříži. Špatný základ znamená, že dílky nebudou sedět a budeš se vracet."
+  }
+ ],
+ "flashcards": [
+  { "front": "Kytička (daisy)", "back": "4 bílé hrany kolem žlutého středu nahoře. Mezikrok před bílým křížem." },
+  { "front": "Z kytičky na kříž", "back": "Srovnej barvu lístku se středem pod ním a otoč tou stranou dvakrát (F2)." },
+  { "front": "Kontrola kříže", "back": "Bílý kříž dole a každá hrana navazuje barvou na svůj boční střed." },
+  { "front": "Bílá a žlutá", "back": "Jsou vždy naproti sobě. Žlutý střed nahoře znamená bílou stranu dole." },
+  { "front": "Proč kytička nahoře", "back": "Nahoře lístky snadno srovnáš otáčením U, pak je jen pošleš dolů. Rovnou dole je to těžší." }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Kolik hran žlutého kříže může sedět barvou na svůj střed?",
+   "options": [
+    "Vždy všechny čtyři",
+    "0 se nestává, vždy 2 nebo 4 (po otočení U), nikdy přesně 3",
+    "Kolikoli od 0 do 4",
+    "Vždy jen jedna"
+   ],
+   "correct": 1,
+   "explain": "Kostka nedovolí prohodit jen dvě hrany bez dalších změn. Po srovnání U vyjdou vždy 2 správné, nebo rovnou 4."
+  },
+  {
+   "q": "K čemu se v tomto kroku používá Sune (R U R' U R U2 R')?",
+   "options": [
+    "K otočení rohů",
+    "K prohození hran kříže, aby seděly na své středy",
+    "Ke složení kytičky",
+    "K rozebrání kostky"
+   ],
+   "correct": 1,
+   "explain": "Sune prohodí hrany. Dvě správné sousední hrany dej dozadu a doprava, po algoritmu a dotočení U sedí všechny."
+  },
+  {
+   "q": "Co znamená, že je roh doma?",
+   "options": [
+    "Má žlutou nahoře",
+    "Jeho tři barvy odpovídají třem stranám kolem něj, i když je otočený",
+    "Je v pravém předním rohu",
+    "Je vedle středu"
+   ],
+   "correct": 1,
+   "explain": "Doma = správná adresa podle barev okolních středů. Otočení (žlutá do boku) se řeší až v dalším kroku."
+  },
+  {
+   "q": "Kam natočíš domácí roh před kolotočem U R U' L' U R' U' L?",
+   "options": [
+    "Dozadu doleva",
+    "Vpravo dopředu nahoru",
+    "Dolů",
+    "Je to jedno"
+   ],
+   "correct": 1,
+   "explain": "Domácí roh drž vpravo vepředu nahoře, algoritmus pak točí zbylými třemi rohy dokola. Případně spusť dvakrát."
+  }
+ ],
+ "flashcards": [
+  { "front": "Sune", "back": "R U R' U R U2 R'. V tomto kroku prohazuje hrany žlutého kříže na správné středy." },
+  { "front": "Pravidlo 2 nebo 4", "back": "Správně sedí vždy 2 nebo 4 hrany kříže, nikdy přesně 3. To je vlastnost kostky, ne chyba." },
+  { "front": "Roh je doma", "back": "Tři barvy rohu = tři strany kolem něj. Smí být otočený, otočení se řeší v K08." },
+  { "front": "Rohový kolotoč", "back": "U R U' L' U R' U' L. Domácí roh vpravo vepředu, zbylé tři se točí dokola." },
+  { "front": "Žádný roh doma", "back": "Spusť kolotoč z libovolné pozice, tím jeden domácí roh vznikne. Pak klasicky." }
+ ]
+}

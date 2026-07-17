@@ -1,0 +1,16 @@
+# uzivatelska data (SQLite DB + zalohy) - nikdy necommitovat
+data/
+*.db
+*.db.bak-*
+
+# runtime / build
+engine/node_modules/
+engine/.next/
+
+# kurzy: vychozi stav = PRIVATNI, public jen explicitni whitelist niz
+courses/*
+
+# --- public kurzy (pridej dalsi radkem !courses/<id>/) ---
+!courses/rubikova-kostka/
+__pycache__/
+*.pyc

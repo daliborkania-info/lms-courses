@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Jak zjistíš, který krok skládání tě nejvíc brzdí?",
+   "options": [
+    "Odhadem",
+    "Změřím si každý krok zvlášť a porovnám časy",
+    "Zeptám se kamaráda",
+    "Je to vždycky poslední vrstva"
+   ],
+   "correct": 1,
+   "explain": "Profilování před optimalizací: změř kříž, rohy, druhou vrstvu a poslední vrstvu zvlášť. Bottleneck bývá jeden."
+  },
+  {
+   "q": "Proč plynulost poráží spěch?",
+   "options": [
+    "Neporáží, rychlé tahy jsou vždy lepší",
+    "Pauzy na přemýšlení stojí víc času, než kolik rychlé tahy ušetří",
+    "Protože je to hezčí",
+    "Kvůli opotřebení kostky"
+   ],
+   "correct": 1,
+   "explain": "Trhané rychlé tahy s pauzami prohrávají s pomalým tokem bez zastavení. Platí od začátečníka po mistry světa."
+  },
+  {
+   "q": "Jaká tréninková rutina funguje nejlépe?",
+   "options": [
+    "2 hodiny jednou týdně",
+    "15 minut každý den, navázaných na existující zvyk",
+    "Jen když je nálada",
+    "Celý víkend jednou za měsíc"
+   ],
+   "correct": 1,
+   "explain": "Krátce a denně poráží nárazové dávky: paměť i ruce se učí spánkem mezi tréninky. Návaznost na zvyk drží rutinu."
+  },
+  {
+   "q": "Jaký čas je rozumná brána do CFOP?",
+   "options": [
+    "10 minut",
+    "Kolem 2 minut metodou vrstev",
+    "30 sekund",
+    "Na čase nezáleží"
+   ],
+   "correct": 1,
+   "explain": "Pod 2 minuty znamená, že základní kroky máš zautomatizované a přechod na CFOP (blok 3) dává smysl."
+  }
+ ],
+ "flashcards": [
+  { "front": "Deník časů", "back": "Jeden zapsaný čas denně. Startovní čára a viditelný pokrok, žádný stres z každého solvu." },
+  { "front": "Bottleneck krok", "back": "Krok, který žere nejvíc času. Najdi měřením po krocích, trénuj jen ten." },
+  { "front": "Plynulost vs. spěch", "back": "Pomalé tahy bez zastavení porážejí rychlé tahy s pauzami. Trénuj tok, ne trhání." },
+  { "front": "Hledání očima dopředu", "back": "Při dotáčení jednoho dílku už oči hledají další. Zárodek techniky lookahead." },
+  { "front": "Rutina 15 minut denně", "back": "Navázaná na existující zvyk (po večeři). Denní krátký trénink poráží víkendový maraton." }
+ ]
+}

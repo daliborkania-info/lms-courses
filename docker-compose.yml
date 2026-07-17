@@ -1,0 +1,15 @@
+services:
+  lms:
+    build: ./engine
+    container_name: studium-lms
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      # ENGINE vs. DATA separation - no rebuild needed for content changes:
+      # 1) courses: drop a new course folder here, the engine picks it up automatically
+      - ./courses:/app/courses:ro
+      # 2) user data: SQLite database with profiles, progress, XP, badges
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production

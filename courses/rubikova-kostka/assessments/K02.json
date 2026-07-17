@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Co znamená písmeno R v zápisu tahů?",
+   "options": [
+    "Otoč celou kostku doprava",
+    "Otoč pravou stranu o čtvrt otáčky po směru hodinových ručiček",
+    "Otoč pravou stranu dvakrát",
+    "Rozlož kostku"
+   ],
+   "correct": 1,
+   "explain": "R = Right, pravá strana o čtvrtku po směru hodinových ručiček, jako bys na ni koukal zepředu. Celá kostka se neotáčí."
+  },
+  {
+   "q": "Jaký je rozdíl mezi R a R'?",
+   "options": [
+    "Žádný",
+    "R' je stejný tah opačným směrem",
+    "R' znamená dvakrát",
+    "R' je levá strana"
+   ],
+   "correct": 1,
+   "explain": "Čárka (apostrof) znamená proti směru hodinových ručiček. R' je tedy pravá strana obráceně než R."
+  },
+  {
+   "q": "Proč se kostka nemá během série tahů překlápět v ruce?",
+   "options": [
+    "Aby se neopotřebovala",
+    "Ztratil by se význam písmen: F by najednou byla jiná strana",
+    "Je to zakázané pravidly",
+    "Kvůli rychlosti"
+   ],
+   "correct": 1,
+   "explain": "Notace se vztahuje k tomu, jak kostku držíš. Když ji překlopíš, R najednou znamená jinou stranu a zápis přestane platit."
+  },
+  {
+   "q": "Co udělá zápis U2?",
+   "options": [
+    "Horní stranu dvakrát, tedy o půl otáčky",
+    "Horní a spodní stranu",
+    "Horní stranu velmi rychle",
+    "Dvě různé strany"
+   ],
+   "correct": 0,
+   "explain": "Číslo 2 za písmenem znamená dvakrát za sebou, tedy půl otáčky. Směr je při půlotáčce jedno."
+  }
+ ],
+ "flashcards": [
+  { "front": "F, B, R, L, U, D", "back": "Front (přední), Back (zadní), Right (pravá), Left (levá), Up (horní), Down (spodní)." },
+  { "front": "Čárka za písmenem (R')", "back": "Otoč proti směru hodinových ručiček. Bez čárky po směru, jako volant doprava." },
+  { "front": "Dvojka za písmenem (R2)", "back": "Otoč stranu dvakrát, tedy o půl otáčky. Směr je jedno." },
+  { "front": "Jak držet kostku při čtení zápisu", "back": "Pořád stejně, přední strana na mě. Během série tahů kostku nepřeklápět." },
+  { "front": "Kouzlo R U R' U'", "back": "Základní čtyřtahová sekvence. Po 6 opakováních se kostka vrátí do původního stavu." }
+ ]
+}

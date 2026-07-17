@@ -1,0 +1,55 @@
+{
+ "quiz": [
+  {
+   "q": "Kolik dílků má Rubikova kostka 3x3?",
+   "options": [
+    "54, každá nálepka je dílek",
+    "26: 6 středů, 12 hran a 8 rohů",
+    "27 stejných kostiček",
+    "20, středy se nepočítají"
+   ],
+   "correct": 1,
+   "explain": "Kostka má 6 středů, 12 hran a 8 rohů, celkem 26 dílků. Nálepky nejsou dílky a prostřední kostička uvnitř neexistuje."
+  },
+  {
+   "q": "Co platí o středech kostky?",
+   "options": [
+    "Dají se prohodit mezi sebou",
+    "Nikdy se nepohnou z místa a určují barvu strany",
+    "Mají dvě barvy",
+    "Jsou jich 4"
+   ],
+   "correct": 1,
+   "explain": "Středů je 6, jen se otáčí na místě. Bílý střed znamená: tady bude bílá strana. Proto se skládá podle středů."
+  },
+  {
+   "q": "Kam patří hrana s bílou a červenou barvou?",
+   "options": [
+    "Kamkoli, kde je místo",
+    "Přesně mezi bílý a červený střed",
+    "Mezi bílý a oranžový střed",
+    "Do libovolného rohu"
+   ],
+   "correct": 1,
+   "explain": "Každý dílek má jediné správné místo jako dílek puzzle. Hranu bílá a červená určují právě ty dva středy."
+  },
+  {
+   "q": "Co znamená složená kostka?",
+   "options": [
+    "Každá strana má hodně stejné barvy",
+    "Každý dílek je na svém jediném správném místě",
+    "Bílá strana je hotová",
+    "Nálepky jsou přelepené správně"
+   ],
+   "correct": 1,
+   "explain": "Neskládáme barvy, ale stěhujeme dílky na jejich domácí adresy. Když je každý dílek doma, každá strana má automaticky jednu barvu."
+  }
+ ],
+ "flashcards": [
+  { "front": "Střed (center)", "back": "Dílek uprostřed strany. Je jich 6, nikdy se nepohnou a určují barvu strany." },
+  { "front": "Hrana (edge)", "back": "Dílek se 2 barvami mezi dvěma středy. Na kostce je jich 12." },
+  { "front": "Roh (corner)", "back": "Dílek se 3 barvami v rohu kostky. Na kostce je jich 8." },
+  { "front": "Kolik dílků má kostka", "back": "26: 6 středů + 12 hran + 8 rohů. Myslíme v dílcích, ne v nálepkách." },
+  { "front": "Složená kostka", "back": "Každý dílek na svém jediném správném místě podle středů. Skládání = stěhování dílků domů." }
+ ]
+}

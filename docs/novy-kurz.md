@@ -139,3 +139,79 @@ pojem/otázku, všechno co se může vyvíjet patří do `back`.
 
 Nasazení obsahu = nakopírovat složku do `courses/` na serveru. Žádný rebuild;
 engine si změny načte do 15 sekund.
+
+## 6. Vytvoření kurzu s AI (kompletní postup)
+
+Kurz je jen sada souborů, takže ho celý může napsat AI asistent. Nejlépe funguje
+agentní nástroj s přístupem k souborům (Claude Code, Cowork, Cursor apod.), který
+soubory rovnou založí a zvaliduje; s čistě chatovým AI to jde taky, jen soubory
+kopíruješ ručně.
+
+### Krok 1: Připrav vstupy
+
+Dej AI k přečtení tento návod (`docs/novy-kurz.md`) a jeden existující modul jako
+vzor stylu (např. `courses/rubikova-kostka/modules/K03.md`). Rozmysli si:
+
+- **téma a cíl** - co má absolvent umět, ne jen "vědět",
+- **rozsah** - kompaktní (2 bloky), standardní (3), velké kurikulum (4-6),
+- **publikum** - dítě, dospělý začátečník, profesionál; jazyk a tón,
+- **personalizaci** - čemu se učíš TY a k čemu to použiješ (viz krok 4).
+
+### Krok 2: Nejdřív osnova, pak obsah
+
+Nech AI navrhnout osnovu: bloky, seznam modulů s jednovětým popisem každého.
+**Schval ji dřív, než se začne psát obsah** - oprava osnovy stojí minutu, oprava
+20 hotových modulů hodiny. Chtěj po AI zdůvodnění řazení (co na čem staví) a
+označení volatility u každého modulu.
+
+### Krok 3: Výzkum před psaním
+
+U modulů označených RYCHLA (a STREDNI tam, kde se obor hýbe) musí AI udělat
+čerstvou webovou rešerši před psaním, ne psát z paměti - ceny, verze nástrojů,
+doporučené zdroje a knihy se mění. Chtěj reálné, existující zdroje a ověř
+namátkou, že doporučená kniha/web opravdu existuje.
+
+### Krok 4: Generuj po dávkách a personalizuj
+
+Obsah nech psát po blocích (5 modulů + test), ne celý kurz najednou - snáz se
+kontroluje a opravuje. Kvalita stojí na dvou věcech:
+
+1. **Aplikace na tvůj život.** Sekce "Aplikace do 30 dnů" musí mířit na tvou
+   konkrétní situaci (práce, studium, rodina), ne na abstraktní cvičení. Řekni
+   AI dopředu, k čemu kurz potřebuješ.
+2. **Hustota, ne vata.** Chtěj "studijní konspekt": definice + proč je to
+   důležité + kde to selhává. Žádné motivační fráze a vycpávky.
+
+Pořadí souborů: `course.json` → moduly → `assessments/`. Kartičky piš podle
+pravidla identity ze sekce 4 (stabilní `front`, vyvíjející se `back`).
+
+### Krok 5: Obrázky (volitelné)
+
+Kde text nestačí (postupy, stavy, schémata), nech AI vygenerovat SVG do
+`assets/` a odkázat je z modulů. Osvědčený postup z kurzu `rubikova-kostka`:
+AI napíše generátor (Python skript), který SVG vyrábí programově - diagramy
+jsou pak konzistentní, opravitelné a ověřitelné (viz `tools/rubiklib.py`,
+stavy kostky se počítají simulátorem místo kreslení od ruky). Jednodušší
+diagramy zvládne Mermaid přímo v Markdownu bez souborů.
+
+### Krok 6: Validace a nasazení
+
+Nech AI projít checklist ze sekce 5 (ideálně skriptem, ne okem). Pak složku
+nakopíruj do `courses/` na serveru - kurz se objeví do 15 sekund. Projdi první
+dva moduly v UI na mobilu: délka, čitelnost diagramů, funkčnost kvízu.
+
+### Startovací prompt (zkopíruj a doplň)
+
+```text
+Přečti si docs/novy-kurz.md v tomto repu a jeden vzorový modul
+(courses/rubikova-kostka/modules/K03.md). Vytvoř mi nový kurz na téma: [TÉMA].
+
+Kontext: [kdo jsem, proč se to učím, k čemu to použiju, kolik času mám].
+Rozsah: [2/3/4+ bloky]. Publikum: [pro koho, jazyk, tón].
+
+Postup: nejdřív mi ukaž návrh osnovy (bloky a moduly s jednovětým popisem
+a volatilitou) ke schválení. Obsah piš až po schválení, po blocích.
+U RYCHLÝCH modulů udělej před psaním webovou rešerši. Dodrž všechny
+konvence a formáty z návodu a na konci spusť validaci ze sekce 5.
+```
+

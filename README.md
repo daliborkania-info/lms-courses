@@ -35,6 +35,9 @@ lms/
 
 ## Formát kurzu (pro přidávání obsahu)
 
+> **Kompletní postup vytvoření nového kurzu krok za krokem: [docs/novy-kurz.md](docs/novy-kurz.md)**
+> (struktura, course.json, moduly, kvízy a kartičky, obrázky, validace). Níže jen rychlý přehled.
+
 ```
 courses/<id-kurzu>/
 ├── course.json          # manifest: název, semestry, pořadí modulů, odznaky

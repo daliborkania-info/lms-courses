@@ -3,7 +3,12 @@ import "./globals.css";
 export const metadata = {
   title: "Studium | LMS",
   description: "Osobní e-learningový engine",
-  manifest: undefined
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "Studium",
+    statusBarStyle: "black-translucent"
+  }
 };
 
 export const viewport = {

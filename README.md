@@ -7,6 +7,7 @@ Free k užití pod [MIT licencí](LICENSE). Návody:
 - [docs/novy-kurz.md](docs/novy-kurz.md) - vytvoření vlastního kurzu (včetně postupu s AI)
 - [docs/nasazeni.md](docs/nasazeni.md) - nasazení doma: Docker na NAS/routeru, nebo přímo na počítači
 - [docs/vpn.md](docs/vpn.md) - přístup zvenku: Tailscale, WireGuard na MikroTiku, VPN na NAS
+- [docs/mobilni-aplikace.md](docs/mobilni-aplikace.md) - přidání na plochu mobilu jako aplikace (iPhone i Android)
 
 ## Rychlý start (Proxmox / jakýkoli Docker host)
 

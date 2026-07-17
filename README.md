@@ -2,6 +2,8 @@
 
 Modulární "přehrávač kurzů": engine (Next.js + SQLite) je striktně oddělený od obsahu (adresář `courses/`) i od uživatelských dat (adresář `data/`). Nový kurz = nová složka, žádný rebuild.
 
+Free k užití pod [MIT licencí](LICENSE). Návod na vytvoření vlastního kurzu (včetně postupu s AI): [docs/novy-kurz.md](docs/novy-kurz.md).
+
 ## Rychlý start (Proxmox / jakýkoli Docker host)
 
 ```bash

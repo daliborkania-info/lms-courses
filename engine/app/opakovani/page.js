@@ -23,15 +23,19 @@ function fmtNextDue(iso) {
 
 export default function ReviewPage() {
   const { profile, select } = useProfile();
-  const [data, setData] = useState(null);      // { queue, counts, nextDueAt }
+  const [data, setData] = useState(null);      // { queue, counts, nextDueAt, courses }
   const [queue, setQueue] = useState([]);
+  const [courseFilter, setCourseFilter] = useState(null); // null = všechny kurzy
   const [flipped, setFlipped] = useState(false);
   const [busy, setBusy] = useState(false);
   const [doneToday, setDoneToday] = useState(0);
   const [toast, setToast] = useState(null);
 
   const load = useCallback((extraNew = 0) => {
-    fetch(`/api/review/queue?profile=${profile.id}${extraNew ? `&extraNew=${extraNew}` : ""}`)
+    const params = new URLSearchParams({ profile: profile.id });
+    if (extraNew) params.set("extraNew", extraNew);
+    if (courseFilter) params.set("course", courseFilter);
+    fetch(`/api/review/queue?${params}`)
       .then((r) => r.json())
       .then((d) => {
         setData(d);
@@ -39,7 +43,7 @@ export default function ReviewPage() {
         setDoneToday(d.counts?.doneToday || 0);
         setFlipped(false);
       });
-  }, [profile]);
+  }, [profile, courseFilter]);
 
   useEffect(() => { if (profile) load(); }, [profile, load]);
 
@@ -76,14 +80,41 @@ export default function ReviewPage() {
 
   const card = queue[0];
   const counts = data.counts || {};
+  const courses = data.courses || [];
+  const totalDue = courses.reduce((s, c) => s + c.due, 0);
+  // "add 5 new" only makes sense when the current scope has any New cards left
+  const canAddNew = courseFilter
+    ? (courses.find((c) => c.id === courseFilter)?.newAvailable || 0) > 0
+    : courses.some((c) => c.newAvailable > 0);
+
+  const chip = (active) =>
+    `shrink-0 px-3 py-1.5 rounded-full text-xs border transition ${
+      active
+        ? "bg-indigo-600/30 border-indigo-500 text-white"
+        : "bg-slate-800/60 border-slate-700 text-slate-300 hover:border-slate-500"
+    }`;
 
   return (
     <main className="px-4 pt-6 pb-10">
       <h1 className="text-xl font-bold text-white mb-1">🔁 Opakování</h1>
-      <p className="text-xs text-slate-400 mb-4">
+      <p className="text-xs text-slate-400 mb-3">
         Ve frontě {queue.length} · dnes hotovo {doneToday}
         {counts.newRemaining > 0 && ` · nových dnes ještě ${counts.newRemaining}`}
       </p>
+
+      {courses.length > 1 && (
+        <div className="flex gap-2 overflow-x-auto -mx-4 px-4 pb-2 mb-2" role="tablist" aria-label="Filtr kurzů">
+          <button onClick={() => setCourseFilter(null)} className={chip(!courseFilter)}>
+            Vše{totalDue > 0 && ` · ${totalDue}`}
+          </button>
+          {courses.map((c) => (
+            <button key={c.id} onClick={() => setCourseFilter(c.id)} className={chip(courseFilter === c.id)}
+              title={c.title}>
+              {c.icon} {c.title}{c.due > 0 && ` · ${c.due}`}
+            </button>
+          ))}
+        </div>
+      )}
 
       {!card && (
         <div className="card text-center animate-pop">
@@ -92,11 +123,15 @@ export default function ReviewPage() {
           <p className="text-sm text-slate-400 mt-1">
             {data.nextDueAt
               ? <>Další kartička tě čeká {fmtNextDue(data.nextDueAt)}.</>
-              : "Dokonči další modul a jeho kartičky sem přibudou."}
+              : courseFilter
+                ? "Tenhle kurz teď nemá žádné kartičky ve frontě."
+                : "Dokonči další modul a jeho kartičky sem přibudou."}
           </p>
-          <button onClick={() => load(5)} className="btn-ghost w-full mt-4">
-            ➕ Přidat dnes 5 nových kartiček
-          </button>
+          {canAddNew && (
+            <button onClick={() => load(5)} className="btn-ghost w-full mt-4">
+              ➕ Přidat dnes 5 nových kartiček
+            </button>
+          )}
         </div>
       )}
 

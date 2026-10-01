@@ -132,12 +132,19 @@ function previewFor(card, now) {
   return out;
 }
 
-export function reviewCounts(profileId, now = new Date()) {
+/**
+ * Counts, optionally narrowed to one course. The daily new-card budget
+ * (new_per_day, newToday) is always global - a course filter changes which
+ * cards can fill the budget, not its size. doneToday is global too.
+ */
+export function reviewCounts(profileId, now = new Date(), courseId = null) {
   const db = getDb();
   const today = localDay();
+  const scope = courseId ? " AND course_id=?" : "";
+  const scopeArgs = courseId ? [courseId] : [];
   const due = db.prepare(
-    "SELECT COUNT(*) c FROM review_cards WHERE profile_id=? AND state!='New' AND due<=?"
-  ).get(profileId, now.toISOString()).c;
+    `SELECT COUNT(*) c FROM review_cards WHERE profile_id=? AND state!='New' AND due<=?${scope}`
+  ).get(profileId, now.toISOString(), ...scopeArgs).c;
   const newToday = db.prepare(
     "SELECT COUNT(*) c FROM review_cards WHERE profile_id=? AND first_seen_day=?"
   ).get(profileId, today).c;
@@ -145,13 +152,13 @@ export function reviewCounts(profileId, now = new Date()) {
     "SELECT COUNT(*) c FROM review_log WHERE profile_id=? AND day=?"
   ).get(profileId, today).c;
   const learning = db.prepare(
-    "SELECT COUNT(*) c FROM review_cards WHERE profile_id=? AND state!='New'"
-  ).get(profileId).c;
+    `SELECT COUNT(*) c FROM review_cards WHERE profile_id=? AND state!='New'${scope}`
+  ).get(profileId, ...scopeArgs).c;
   // cap the daily budget by the cards that actually exist, otherwise the
   // home tile promises new cards that are not there
   const newAvailable = db.prepare(
-    "SELECT COUNT(*) c FROM review_cards WHERE profile_id=? AND state='New'"
-  ).get(profileId).c;
+    `SELECT COUNT(*) c FROM review_cards WHERE profile_id=? AND state='New'${scope}`
+  ).get(profileId, ...scopeArgs).c;
   const settings = getSettings(profileId);
   return {
     due, newToday, doneToday, learning,
@@ -160,17 +167,43 @@ export function reviewCounts(profileId, now = new Date()) {
 }
 
 /**
+ * Per-course card counts for the filter chips on the review page.
+ * Counts come from the DB (same source as reviewCounts); titles/icons from
+ * content. Courses whose folder no longer exists are skipped.
+ */
+function courseSummary(profileId, now) {
+  const db = getDb();
+  const rows = db.prepare(
+    `SELECT course_id,
+            SUM(CASE WHEN state!='New' AND due<=? THEN 1 ELSE 0 END) due,
+            SUM(CASE WHEN state='New' THEN 1 ELSE 0 END) newAvailable
+     FROM review_cards WHERE profile_id=? GROUP BY course_id`
+  ).all(now.toISOString(), profileId);
+  const byId = new Map(rows.map((r) => [r.course_id, r]));
+  return getCourses()
+    .filter((c) => byId.has(c.id))
+    .map((c) => {
+      const r = byId.get(c.id);
+      return { id: c.id, title: c.title, icon: c.icon || "📘", due: r.due, newAvailable: r.newAvailable };
+    });
+}
+
+/**
  * Build the cross-course queue: due cards first (by due date), then new
  * cards up to the daily limit, round-robin across courses. Cards whose key
  * no longer exists in the content are silently skipped (edited/removed).
+ * With `courseId` the queue is limited to that course; the daily new-card
+ * budget stays global (see reviewCounts).
  */
-export function buildQueue(profileId, now = new Date(), extraNew = 0) {
+export function buildQueue(profileId, now = new Date(), extraNew = 0, courseId = null) {
   const content = syncCards(profileId);
   const db = getDb();
+  const scope = courseId ? " AND course_id=?" : "";
+  const scopeArgs = courseId ? [courseId] : [];
 
   const dueRows = db.prepare(
-    "SELECT card_key, card_json FROM review_cards WHERE profile_id=? AND state!='New' AND due<=? ORDER BY due"
-  ).all(profileId, now.toISOString());
+    `SELECT card_key, card_json FROM review_cards WHERE profile_id=? AND state!='New' AND due<=?${scope} ORDER BY due`
+  ).all(profileId, now.toISOString(), ...scopeArgs);
 
   const queue = [];
   for (const row of dueRows) {
@@ -180,12 +213,12 @@ export function buildQueue(profileId, now = new Date(), extraNew = 0) {
     queue.push({ ...info, state: STATE_NAME[card.state] ?? "Review", preview: previewFor(card, now) });
   }
 
-  const counts = reviewCounts(profileId, now);
+  const counts = reviewCounts(profileId, now, courseId);
   let budget = counts.newRemaining + Math.max(0, Number(extraNew) || 0);
   if (budget > 0) {
     const newRows = db.prepare(
-      "SELECT card_key, course_id, card_json FROM review_cards WHERE profile_id=? AND state='New' ORDER BY course_id, module_id, card_key"
-    ).all(profileId).filter((r) => content.has(r.card_key));
+      `SELECT card_key, course_id, card_json FROM review_cards WHERE profile_id=? AND state='New'${scope} ORDER BY course_id, module_id, card_key`
+    ).all(profileId, ...scopeArgs).filter((r) => content.has(r.card_key));
     // round-robin across courses so a backfill does not dump one course first
     const byCourse = new Map();
     for (const r of newRows) {
@@ -206,10 +239,15 @@ export function buildQueue(profileId, now = new Date(), extraNew = 0) {
   }
 
   const nextDue = db.prepare(
-    "SELECT MIN(due) d FROM review_cards WHERE profile_id=? AND state!='New' AND due>?"
-  ).get(profileId, now.toISOString()).d;
+    `SELECT MIN(due) d FROM review_cards WHERE profile_id=? AND state!='New' AND due>?${scope}`
+  ).get(profileId, now.toISOString(), ...scopeArgs).d;
 
-  return { queue, counts: { ...counts, inQueue: queue.length }, nextDueAt: nextDue };
+  return {
+    queue,
+    counts: { ...counts, inQueue: queue.length },
+    nextDueAt: nextDue,
+    courses: courseSummary(profileId, now)
+  };
 }
 
 /** XP for reviews, capped per day so the queue cannot be farmed. */

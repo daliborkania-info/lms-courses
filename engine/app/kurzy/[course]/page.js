@@ -57,7 +57,7 @@ export default function CoursePage() {
           return (
             <section key={s.number}>
               <div className="flex items-baseline justify-between mb-2">
-                <h2 className="font-bold text-white">Semestr {s.number}: {s.title}</h2>
+                <h2 className="font-bold text-white">{course.semester_label || "Semestr"} {s.number}: {s.title}</h2>
                 <span className="text-xs text-slate-400">{done}/{s.modules.length}</span>
               </div>
               <div className="space-y-2">

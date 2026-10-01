@@ -51,6 +51,8 @@ standardní kurz 3, velké kurikulum 4-6.
 
 - `requires`: id jiného kurzu, který musí být dokončen dřív (jinak `null`).
 - `semesters` řídí pořadí i zamykání v UI; každé ID musí mít soubor v `modules/`.
+- `semester_label` (volitelné): slovo před číslem bloku v UI, výchozí „Semestr“. Např. `"Týden"`
+  pro kurz rozvržený po týdnech, blok se pak zobrazí jako „Týden 1: <název bloku>“.
 
 ## 3. Modul (modules/X01.md)
 

@@ -31,6 +31,6 @@ export async function GET(req, { params }) {
   }));
   return NextResponse.json({
     id: course.id, title: course.title, description: course.description,
-    level: course.level, icon: course.icon, semesters
+    level: course.level, icon: course.icon, semester_label: course.semester_label || null, semesters
   });
 }

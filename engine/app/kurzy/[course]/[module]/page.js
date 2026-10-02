@@ -46,7 +46,9 @@ export default function ModulePage() {
 
   return (
     <main className="px-4 pt-6 pb-10">
-      <Link href={`/kurzy/${courseId}`} className="text-sm text-indigo-400">← Zpět na kurz</Link>
+      <Link href={`/kurzy/${courseId}`} title="Zpět na kurz" className="text-sm text-indigo-400">
+        ← {data.course ? [data.course.icon, data.course.title].filter(Boolean).join(" ") : "Zpět na kurz"}
+      </Link>
       <div className="mt-2 mb-4">
         <h1 className="text-lg font-bold text-white leading-snug">{meta.id !== meta.title ? `${meta.id}: ` : ""}{meta.title}</h1>
         <div className="text-xs text-slate-400 mt-1 flex gap-3 flex-wrap">

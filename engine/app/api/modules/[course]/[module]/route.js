@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getModule, getModuleMeta } from "../../../../../lib/content";
+import { getCourse, getModule, getModuleMeta } from "../../../../../lib/content";
 import { getDb } from "../../../../../lib/db";
 
 export const dynamic = "force-dynamic";
@@ -16,5 +16,9 @@ export async function GET(req, { params }) {
   const metas = getModuleMeta(params.course);
   const idx = metas.findIndex((m) => m.id === params.module);
   const next = idx >= 0 && idx + 1 < metas.length ? metas[idx + 1].id : null;
-  return NextResponse.json({ ...mod, progress: row || null, nextModule: next });
+  const course = getCourse(params.course);
+  return NextResponse.json({
+    ...mod, progress: row || null, nextModule: next,
+    course: { id: course.id, title: course.title, icon: course.icon || null }
+  });
 }
